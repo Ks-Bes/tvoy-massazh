@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<script>
+const pass = prompt("Введите пароль для доступа:");
+
+if (pass !== "spina123") {  // ← тут свой пароль
+    alert("Неверный пароль");
+    document.write("");
+    throw new Error("Доступ закрыт");
+}
+</script>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на массаж онлайн</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Запись на массаж онлайн</h1>
+    <p>Глубокий расслабляющий и терапевтический массаж</p>
+
+    <form action="https://formspree.io/f/xoqoywly" method="POST"></form>
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label for="name" style="display: block; margin-bottom: 5px; color: #5d4037;">Ваше имя</label>
+            <input type="text" id="name" name="name" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+        </div>
+
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label for="phone" style="display: block; margin-bottom: 5px; color: #5d4037;">Телефон</label>
+            <input type="tel" id="phone" name="phone" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+        </div>
+
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label for="time" style="display: block; margin-bottom: 5px; color: #5d4037;">Желаемое время</label>
+            <input type="text" id="time" name="time" placeholder="Например: завтра в 18:00" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+        </div>
+
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label for="message" style="display: block; margin-bottom: 5px; color: #5d4037;">Что нужно?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Спина, шея, всё тело..." 
+                      style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;"></textarea>
+        </div>
+
+        <button type="submit" style="background-color: #8d6e63; color: white; border: none; padding: 14px 28px; font-size: 18px; border-radius: 8px; cursor: pointer; width: 100%;">Отправить заявку</button>
+    </form>
+</body>
